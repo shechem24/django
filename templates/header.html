@@ -11,6 +11,9 @@
         <a href="{% url 'accountapp:login' %}?next={{ request.path }}">
             <span>Login</span>
         </a>
+        <a href="{% url 'accountapp:create' %}">
+            <span>SignUp</span>
+        </a>
         <!-- 로그인이 되어 있는 경우 -->
         {% else %}
         <a href="{% url 'accountapp:detail' pk=user.pk %}">
