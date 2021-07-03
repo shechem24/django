@@ -65,7 +65,10 @@ ROOT_URLCONF = 'django_contigo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            # os.path.join(BASE_DIR, 'accountapp/templates')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
