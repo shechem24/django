@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div style="text-align: center;">
+    <form action="{% url 'accountapp:create' %}" method="POST">
+        {% csrf_token %}
+        <!-- 자동으로 form 생성해줌 -->
+        {{ form }}
+        <input type="submit" class="btn btn-primary">
+    </form>
+
+
+</div>
+
+
+{% endblock %}
