@@ -29,3 +29,32 @@
     max-width: 500px;
     margin: 4rem auto;
 }
+
+/* screen size가 500px 이하면 아래 구문이 적용 */
+@media screen and (max-width:500px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+a {
+    color: black;
+    text-decoration:none;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.contigo_header_nav {
+    margin: 0 0.5rem;
+
+
+}
+
+.contigo_header_navbar {
+    margin: 1rem 0;
+}
+
+

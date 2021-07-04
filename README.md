@@ -1,5 +1,5 @@
 # django
-django test
+make a web with django
 
 # pip install
 django: django 설치

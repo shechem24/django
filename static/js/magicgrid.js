@@ -275,10 +275,11 @@ MagicGrid.prototype.listen = function listen () {
 };
 
 // pure js
+// gutter: 카드간 간격
 let magicGrid = new MagicGrid({
   container: '.container',
   animate: true,
-  gutter: 30,
+  gutter: 12,
   static: true,
   useMin: true
 });
