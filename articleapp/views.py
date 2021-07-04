@@ -6,7 +6,7 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.utils.decorators import method_decorator
-from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
+from django.views.generic import CreateView, DetailView, UpdateView, DeleteView, ListView
 
 from articleapp.forms import ArticleCreationForm
 from articleapp.models import Article
@@ -54,3 +54,10 @@ class ArticleDeleteView(DeleteView):
     context_object_name = 'target_article'
     template_name = 'articleapp/delete.html'
     success_url = reverse_lazy('articleapp:list')
+
+
+class ArticleListView(ListView):
+    model = Article
+    context_object_name = 'article_list'
+    template_name = 'articleapp/list.html'
+    paginate_by = 10                            # 한 페이지에서 몇개의 객체를 보여줄 것인지
