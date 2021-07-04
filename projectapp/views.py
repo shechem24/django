@@ -1,3 +1,4 @@
+from subscribeapp.models import Subscription
 from django.shortcuts import render
 
 # Create your views here.
@@ -32,8 +33,14 @@ class ProjectDetailView(DetailView, MultipleObjectMixin):
     paginate_by = 25
 
     def get_context_data(self, **kwargs):
+        project = self.object
+        user = self.request.user
+
+        if user.is_authenticated:
+            subscription = Subscription.objects.filter(user=user, project=project)
+
         object_list = Article.objects.filter(project=self.get_object())
-        return super(ProjectDetailView, self).get_context_data(object_list=object_list, **kwargs)   # html에서 object_list 사용
+        return super(ProjectDetailView, self).get_context_data(object_list=object_list, subscription=subscription, **kwargs)   # html에서 object_list 사용
 
 
 
