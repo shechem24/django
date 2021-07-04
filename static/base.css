@@ -19,13 +19,13 @@
     margin: 2rem 0;
 }
 
+.contigo_px_div {
+    text-align: center;
+    max-width: 500px;
+    margin: 4rem auto;
+}
 .contigo_500px_div {
     text-align: center;
     max-width: 500px;
     margin: 4rem auto;
 }
-/* .contigo_500px_div {
-    text-align: center;
-    max-width: 500px;
-    margin: 4rem auto;
-} */
