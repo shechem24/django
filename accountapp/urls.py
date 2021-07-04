@@ -1,9 +1,8 @@
-from django.contrib import admin
 from django.urls import path
 from django.contrib.auth.views import LoginView, LogoutView
 from accountapp.views import AccountCreateView, AccountDetailView, AccountUpdateView, AccountDeleteView, hello_world
 
-# 이름 변경 → url에서는 account 이지만, 파이썬 상에서는 accountapp으로 사용
+# 이름 변경 → url에서는 accounts 이지만, 파이썬 상에서는 accountapp으로 사용
 app_name = "accountapp"
 
 urlpatterns = [
